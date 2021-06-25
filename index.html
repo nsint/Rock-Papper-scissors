@@ -1,20 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<!-- 
+
+osintcraxker#0800
+N$nt#9051
+discord.gg/craxker
+
+-->
+
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <title>Document</title>
+    <title>Rock paper scissors</title>
 </head>
 <body>
-    <center>
-        <h1 class="h1">Piedra, papel y Tijeras con Javascript, HTML y CSS</h1>
-        <div class="card">
-            <p id="id"></p>
+    <div class="container" id="container">
+        <h1>N$nt chupala</h1>
+        <div class="all">
+            <div class="stuff">
+                <h2>Win <span id="wins">0</span></h2>
+                <h2>Ties <span id="ties">0</span></h2>
+                <h2>Loses <span id="loses">0</span></h2>
+            </div>
+            <div class="rounds">
+                <h3>Round <span id="rounds">0</span></h3>
+                <hr>
+                <h3><span id="actual-round">.</span></h3>
+                <hr>
+            </div>
+            <div class="player">
+                <h4 id="nickname"></h4>
+                <div class="card">
+                    <p id="player"></p>
+                </div>
+                <code>Cambiar nombre de usuario</code>
+                <button class="btn" name="rock" type="submit">✊</button>
+                <button class="btn" name="paper" type="submit">👋</button>
+                <button class="btn" name="scissors" type="submit">✌️</button>
+            </div>
+            <div class="machine">
+                <h4>Machine</h4>
+                <div class="card">
+                    <p id="machine"></p>
+                </div>
+            </div>
         </div>
-        <button class="btn" id="btn" type="button">Piedra Papel o Tijera</button>
-    </center>
+    </div>
+    <div class="card-input" id="card-input">
+        <h1>Ingresa tu nombre de usuario</h1>
+        <input type="text" id="new-nick" placeholder="Nuevo nick..." />
+        <button id="submit-nick">Submit</button>
+    </div>
 </body>
 <script src="index.js"></script>
 </html>
