@@ -12,6 +12,8 @@ let winsCount = 0;
 let tiesCount = 0;
 let roundCount = 0;
 
+const username = window.localStorage.getItem('username');
+
 function sleep(ms) {
     return new Promise(resolve => {
         setTimeout(resolve, ms);
@@ -67,15 +69,15 @@ function comparar(usuario, computadora) {
         ties.innerHTML = tiesCount;
     }
     if (usuario === "r" && computadora === "s") {
-        respuesta.innerHTML = "Ganó <bold>Player</bold> con Roca!";
+        respuesta.innerHTML = `Ganó <bold>${username}</bold> con Roca!`;
         winsCount = winsCount + 1;
         wins.innerHTML = winsCount;
     } else if (usuario === "s" && computadora === "p") {
-        respuesta.innerHTML = "Ganó <bold>Player</bold> con Tijeras!";
+        respuesta.innerHTML = `Ganó <bold>${username}</bold> con Tijeras!`;
         winsCount = winsCount + 1;
         wins.innerHTML = winsCount;
     } else if (usuario === "p" && computadora === "r") {
-        respuesta.innerHTML = "Ganó <bold>Player</bold> con Papel!";
+        respuesta.innerHTML = `Ganó <bold>${username}</bold> con Papel!`;
         winsCount = winsCount + 1;
         wins.innerHTML = winsCount;
     }
@@ -109,7 +111,7 @@ document.querySelector("#submit-nick").addEventListener('click', e => {
     document.querySelector("#card-input").style.display = "none";
 });
 
-if (window.localStorage.getItem('username') == null){
+if (username == null){
     window.localStorage.setItem('username', "Player");
 }
 
